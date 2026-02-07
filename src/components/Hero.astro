@@ -3,7 +3,7 @@ import Box from "./Box.astro";
 ---
 
 <section
-  class="w-full grid grid-cols-1 grid-rows-1 lg:grid-cols-2 gap-4 items-center"
+  class="w-full grid grid-cols-1 grid-rows-1 lg:grid-cols-2 gap-4 place-items-center"
   id="hero"
 >
   <div class="w-full grid h-screen place-items-center py-10">
@@ -32,8 +32,16 @@ import Box from "./Box.astro";
           <span class="col-span-2">MSc Bioinformatics</span>
         </div>
         <div class="grid place-items-left grid-cols-1 md:grid-cols-3">
+          <span class="text-cyan-500">Coding</span>
+          <span id="code_time" class="col-span-2">2+ Years</span>
+        </div>
+        <div class="grid place-items-left grid-cols-1 md:grid-cols-3">
           <span class="text-cyan-500">Professional</span>
           <span id="work_time" class="col-span-2">2+ Years</span>
+        </div>
+        <div class="grid place-items-left grid-cols-1 md:grid-cols-3">
+          <span class="text-cyan-500">Speaks</span>
+          <span class="col-span-2">German & English</span>
         </div>
       </div>
     </Box>
@@ -45,16 +53,12 @@ import Box from "./Box.astro";
           <div class="col-span-2">
             <span class="">Software Developer</span>
             <br />
-            <a
-              class="hover:text-amber-500 text-xl flex gap-1"
-              href="https://osiris-solutions.de/"
-              target="_blank"
-              >@ Osiris Solutions GmbH
-              <svg
+              <a class="text-xl hover:text-amber-500 hover:fill-amber-500 fill-white flex gap-1"href="https://osiris-solutions.de/" target="_blank"
+                >@ Osiris Solutions GmbH
+                <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="23"
                 height="23"
-                fill="#ffffff"
                 viewBox="0 0 256 256"
               >
                 <path
@@ -62,24 +66,27 @@ import Box from "./Box.astro";
                 >
                 </path>
               </svg>
-            </a>
+              </a>
+              
           </div>
         </div>
         <div class="grid place-items-left grid-cols-1 md:grid-cols-3">
           <span class="text-cyan-500">2023 - 2026</span>
           <div class="col-span-2">
-            <span>Scientific Web Developer</span>
+            <span>Research Associate</span>
             <br />
-            <a
-              class="hover:text-amber-500 text-xl flex gap-1"
-              href="https://www.dsmz.de/"
-              target="_blank"
-              >@ Leibniz Insitut DSMZ
+            <span class="text-xl">-  Bioinformatics & Databases - </span>
+            <br />
+            <div
+              class="text-xl hover:text-amber-500 hover:fill-amber-500 fill-white flex gap-1"
+            >
+              <a href="https://www.dsmz.de/" target="_blank"
+                >@ Leibniz Insitut DSMZ
+              </a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="23"
                 height="23"
-                fill="#ffffff"
                 viewBox="0 0 256 256"
               >
                 <path
@@ -87,7 +94,7 @@ import Box from "./Box.astro";
                 >
                 </path>
               </svg>
-            </a>
+            </div>
           </div>
         </div>
         <div class="grid place-items-left grid-cols-1 md:grid-cols-3">
@@ -112,6 +119,9 @@ import Box from "./Box.astro";
   const workTime = document.getElementById("work_time");
   workTime.innerText = this_year - 2023 + "+ Years";
 
+  const codeTime = document.getElementById("code_time");
+  codeTime.innerText = this_year - 2013 + "+ Years";
+
   const currentAge = document.getElementById("current_age");
   if ((month == 11 && day >= 23) || month == 12) {
     currentAge.innerText = this_year - 1993;
@@ -128,7 +138,7 @@ import Box from "./Box.astro";
      (       
 |'''''''''|-.
 |         |-'
-\\_______/  
+\\________/  
 `,
     `
      (  )    
@@ -136,7 +146,7 @@ import Box from "./Box.astro";
   (          
 |'''''''''|-.
 |         |-'
-\\_______/  
+\\________/  
 `,
     `
      (       
@@ -144,7 +154,7 @@ import Box from "./Box.astro";
   (     (    
 |'''''''''|-.
 |         |-'
-\\_______/  
+\\________/  
 `,
     `
   (          
@@ -152,7 +162,7 @@ import Box from "./Box.astro";
       ) (    
 |'''''''''|-.
 |         |-'
-\\_______/  
+\\________/  
 `,
     `
   (     (    
@@ -160,7 +170,7 @@ import Box from "./Box.astro";
       )      
 |'''''''''|-.
 |         |-'
-\\_______/  
+\\________/  
 `,
     `
       ) (    
@@ -168,7 +178,7 @@ import Box from "./Box.astro";
    )         
 |'''''''''|-.
 |         |-'
-\\_______/  
+\\________/  
 `,
     `
       )      
@@ -176,7 +186,7 @@ import Box from "./Box.astro";
    )     )   
 |'''''''''|-.
 |         |-'
-\\_______/  
+\\________/  
 `,
     `
    )         
@@ -184,7 +194,7 @@ import Box from "./Box.astro";
      (   )   
 |'''''''''|-.
 |         |-'
-\\_______/  
+\\________/  
 `,
   ];
 

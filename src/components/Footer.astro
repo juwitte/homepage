@@ -3,18 +3,26 @@
 ---
 
 <div class="w-full grid place-items-center py-8 text-center">
-        <div id="my_impress" class="bg-white text-black rounded-3xl px-3 py-1 click:-mt-15 hover:bg-amber-500">
+        <div id="my_impress" class="bg-white text-black rounded-3xl px-3 py-1 click:-mt-15 hover:bg-amber-500 transition-all ease-in-out">
                 Impress
         </div>
 </div>
 
 <script>
     const myImpress = document.getElementById("my_impress");
+    var impressState = false;
+
+    function show_impress(i: HTMLElement){
+        i.innerText = "Impress\nJulius Witte\nAueweg " + (45+9) + "\n" + 383*100 +" Wolfenbüttel";
+    }
+    function hide_impress(i: HTMLElement){
+        i.innerText = "Impress";
+    }
+    
+
     myImpress?.addEventListener("click", () => {
-        myImpress.innerText = "Impress\nJulius Witte\nAueweg " + (45+9) + " - 38300 Wolfenbüttel";
-    });
-    myImpress?.addEventListener("mouseleave", () => {
-        setTimeout(()=>{myImpress.innerText = "Impress";}, 5000)
-        
+        impressState = !impressState;
+        impressState ? hide_impress(myImpress) : show_impress(myImpress);
+
     });
 </script>

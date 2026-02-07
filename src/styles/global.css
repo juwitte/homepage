@@ -7,7 +7,23 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Stint';
+  src: url('/fonts/StintUltraExpanded-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space';
+  src: url('/fonts/SpaceMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme {
   --font-sans: 'Goldman', 'sans-serif';
+  --font-mono: 'Space', 'serif';
+  --font-serif: 'Stint', 'serif';
 }
